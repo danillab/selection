@@ -142,7 +142,7 @@ class SelectorList(object):
             else:
                 return default
         else:
-            result_list = [item.html(encoding=encoding) for item in sel.select('./*')]
+            result_list = [item.html(encoding=encoding) for item in sel.select('./node()')]
             return ''.join(result_list).strip()
 
     def number(self, default=NULL, ignore_spaces=False,
